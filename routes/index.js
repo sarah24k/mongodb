@@ -46,7 +46,7 @@ router.get('/comment', function(req, res, next) {
 });
 
 /* REMOVE comments from database */
-router.delete('/comment', function(req, res, next) {
+router.delete('/comment', function(res) {
   console.log("In the REMOVE route?");
   Comment.remove({});
 });
