@@ -46,14 +46,17 @@ router.get('/comment', function(req, res, next) {
 });
 
 /* REMOVE comments from database */
-router.delete('/comment', function(req, res, next) {
-  console.log("In the REMOVE route?");
-  Comment.remove({}, function(err,removed) {
+router.delete('/comment',function(req, res, next) {
+  console.log("In REMOVE route");
+  Comment.remove({}, function(err, removed){
     if (err) {
       console.log("Sorry, remove no worky");
+      console.log(err);
     } else {
-      res.end('{"success":"Deleted Successfully", "status":200}');
+      res.end('{"success" : "Deleted Successfully", "status" : 200}');
     }
   });
+  console.log("After comments should be removed.");
 });
+
 module.exports = router;
