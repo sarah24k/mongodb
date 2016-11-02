@@ -33,7 +33,7 @@ $(document).ready(function(){
     $.ajax({
       url:url,
       type: "DELETE",
-      success: function(data,textStatus) {
+      success: function(res) {
           $("#comments").html();
       }
     })
