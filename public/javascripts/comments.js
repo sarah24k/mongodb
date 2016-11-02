@@ -31,12 +31,14 @@ $(document).ready(function(){
   $("#deleteThem").click(function() {
     var url = "comment";
     $.ajax({
-      url:url,
-      type: "DELETE",
-      success: function(res) {
-          $("#comments").html();
-      }
-    })
+          url:url,
+          type: "DELETE",
+          success: function(res) {
+              console.log("All were deleted");
+              console.log(res);
+              $('#comments').html('');
+          }
+        })
   });
 
 });
