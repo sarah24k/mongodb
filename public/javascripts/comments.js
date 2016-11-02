@@ -34,7 +34,7 @@ $(document).ready(function(){
       url:url,
       type: "DELETE",
       success: function(data,textStatus) {
-          $("#done").html(textStatus);
+          $("#comments").html();
       }
     })
   });
