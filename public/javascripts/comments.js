@@ -29,11 +29,10 @@ $(document).ready(function(){
   });
 
   $("#deleteThem").click(function() {
+    var url = "comment";
     $.ajax({
       url:url,
       type: "DELETE",
-      data: jobj,
-      contentType: "application/json; charset=utf-8",
       success: function(data,textStatus) {
           $("#done").html(textStatus);
       }
